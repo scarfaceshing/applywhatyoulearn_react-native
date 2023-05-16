@@ -1,6 +1,4 @@
-# applywhatyoulearn_react-native
-
-# JOURNEY OF LEARNING REACT-NATIVE
+# applywhatyoulearn_react-native (a journey OF learning of react-native)
 
 ### Run my Emulator
 
@@ -21,3 +19,10 @@ npm run export
 cd ./android
 ./gradlew assembleDebug
 ```
+
+## HARD INTEGRATION
+
+### installing widget
+
+das
+https://www.asapdevelopers.com/how-to-build-widgets-for-a-react-native-app/

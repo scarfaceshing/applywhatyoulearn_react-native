@@ -7,7 +7,7 @@ const group = 'group.com.awylreactnative';
 const SharedStorage = NativeModules.SharedStorage;
 
 const App = () => {
-  const [text, setText] = useState('test');
+  const [text, setText] = useState('');
   const widgetData = {
     text,
   };
