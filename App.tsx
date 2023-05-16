@@ -10,6 +10,7 @@ import {Provider} from 'react-redux';
 import store from './store/store';
 import ReduxPage from './Pages/ReduxPage';
 import FloatingBubblePage from './Pages/FloatingBubblePage';
+import WidgetPage from './Pages/WidgetPage';
 
 interface State {}
 
@@ -29,6 +30,7 @@ class App extends React.Component<Props, State> {
               <Drawer.Screen name="Home" component={HomePage} />
               <Drawer.Screen name="Redux" component={ReduxPage} />
               <Drawer.Screen name="Floating" component={FloatingBubblePage} />
+              <Drawer.Screen name="Widget" component={WidgetPage} />
               <Drawer.Screen name="Test" component={TestPage} />
             </Drawer.Navigator>
           </NavigationContainer>
