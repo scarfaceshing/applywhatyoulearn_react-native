@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, TextInput, StyleSheet, NativeModules} from 'react-native';
 import SharedGroupPreferences from 'react-native-shared-group-preferences';
 
@@ -6,13 +6,30 @@ const group = 'group.com.awylreactnative';
 
 const SharedStorage = NativeModules.SharedStorage;
 
-const App = () => {
-  const [text, setText] = useState('');
-  const widgetData = {
-    text,
-  };
+interface IProps {}
+interface IState {
+  text?: string;
+}
 
-  const handleSubmit = async () => {
+class WidgetPage extends React.Component<IProps, IState> {
+  widgetData: any;
+
+  constructor(props: IProps) {
+    super(props);
+
+    this.state = {
+      text: '',
+    };
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit = async () => {
+    const {text} = this.state;
+    const widgetData = {
+      text,
+    };
+
     try {
       // iOS
       await SharedGroupPreferences.setItem('widgetKey', widgetData, group);
@@ -23,21 +40,23 @@ const App = () => {
     SharedStorage.set(JSON.stringify({text}));
   };
 
-  return (
-    <View style={styles.container}>
-      <TextInput
-        style={styles.input}
-        onChangeText={newText => setText(newText)}
-        value={text}
-        returnKeyType="send"
-        onEndEditing={handleSubmit}
-        placeholder="Enter the text to display..."
-      />
-    </View>
-  );
-};
+  render() {
+    return (
+      <View style={styles.container}>
+        <TextInput
+          style={styles.input}
+          onChangeText={newText => this.setState({text: newText})}
+          value={this.state.text}
+          returnKeyType="send"
+          onEndEditing={this.handleSubmit}
+          placeholder="Enter the text to display..."
+        />
+      </View>
+    );
+  }
+}
 
-export default App;
+export default WidgetPage;
 
 const styles = StyleSheet.create({
   container: {
