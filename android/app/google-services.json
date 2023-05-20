@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "644419456243",
+    "firebase_url": "https://mitproject-c8287.firebaseio.com",
+    "project_id": "mitproject-c8287",
+    "storage_bucket": "mitproject-c8287.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:644419456243:android:b027ade9258310aa84bb86",
+        "android_client_info": {
+          "package_name": "com.awylreactnative"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "644419456243-d4hl0aikqr67b0gv1uvi4frjai78ttvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG8dIWg9wLEmJPbQ_D2Bk0GeVNpSbIxWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "644419456243-d4hl0aikqr67b0gv1uvi4frjai78ttvf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

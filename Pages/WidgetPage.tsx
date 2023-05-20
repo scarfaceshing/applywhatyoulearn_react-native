@@ -45,6 +45,7 @@ class WidgetPage extends React.Component<IProps, IState> {
       <View style={styles.container}>
         <TextInput
           style={styles.input}
+          placeholderTextColor="#999"
           onChangeText={newText => this.setState({text: newText})}
           value={this.state.text}
           returnKeyType="send"
@@ -68,5 +69,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     fontSize: 20,
     minHeight: 40,
+    color: 'black',
   },
 });

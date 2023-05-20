@@ -1,5 +1,9 @@
 {
   "extends": "@tsconfig/react-native/tsconfig.json",
+  "include": [
+    "**/*.tsx",
+    "types.d.ts"
+  ],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
 

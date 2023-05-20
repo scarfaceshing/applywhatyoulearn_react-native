@@ -2,7 +2,7 @@ import * as React from 'react';
 import SplashScreen from 'react-native-splash-screen';
 
 const isOnTesting: boolean = false;
-const defaultRedirectPage = isOnTesting ? 'Test' : 'Widget';
+const defaultRedirectPage = isOnTesting ? 'Test' : 'Notification';
 
 interface PropsInterface {
   navigation: any;
